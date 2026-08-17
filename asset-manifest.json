@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/iwan20131202/react-6_hw-29/static/css/main.e6c13ad2.css",
+    "main.js": "/iwan20131202/react-6_hw-29/static/js/main.7a14cc6f.js",
+    "index.html": "/iwan20131202/react-6_hw-29/index.html",
+    "main.e6c13ad2.css.map": "/iwan20131202/react-6_hw-29/static/css/main.e6c13ad2.css.map",
+    "main.7a14cc6f.js.map": "/iwan20131202/react-6_hw-29/static/js/main.7a14cc6f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.7a14cc6f.js"
+  ]
+}
