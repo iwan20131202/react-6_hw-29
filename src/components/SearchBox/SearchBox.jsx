@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { setFilter } from "../../redux/contactsSlice";
 
-import { Box, Label, Input } from "./SearchBox.styled";
+import { SearchBoxWrapper, SearchBoxLabel, SearchBoxInput } from "./SearchBox.styled";
 
 export const SearchBox = () => {
   const dispatch = useDispatch();
@@ -13,10 +13,10 @@ export const SearchBox = () => {
   };
 
   return (
-    <Box>
-      <Label>Find contacts by name</Label>
+    <SearchBoxWrapper>
+      <SearchBoxLabel>Find contacts by name</SearchBoxLabel>
 
-      <Input type="text" value={filter} onChange={handleChange} />
-    </Box>
+      <SearchBoxInput type="text" value={filter} onChange={handleChange} />
+    </SearchBoxWrapper>
   );
 };

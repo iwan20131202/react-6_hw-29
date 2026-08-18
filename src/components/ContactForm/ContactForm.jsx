@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { addContact } from "../../redux/contactsSlice";
 
-import { Form, Label, Input, Button } from "./ContactForm.styled";
+import { ContactFormWrapper, ContactFormLabel, ContactFormInput, ContactFormButton } from "./ContactForm.styled";
 
 export const ContactForm = () => {
   const [name, setName] = useState("");
@@ -27,26 +27,26 @@ export const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <Label>
+    <ContactFormWrapper onSubmit={handleSubmit}>
+      <ContactFormLabel>
         Name
-        <Input
+        <ContactFormInput
           type="text"
           value={name}
           onChange={(event) => setName(event.target.value)}
         />
-      </Label>
+      </ContactFormLabel>
 
-      <Label>
+      <ContactFormLabel>
         Number
-        <Input
+        <ContactFormInput
           type="tel"
           value={number}
           onChange={(event) => setNumber(event.target.value)}
         />
-      </Label>
+      </ContactFormLabel>
 
-      <Button type="submit">Add contact</Button>
-    </Form>
+      <ContactFormButton type="submit">Add contact</ContactFormButton>
+    </ContactFormWrapper>
   );
 };

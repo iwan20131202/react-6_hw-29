@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Item = styled.li`
+export const ContactItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -13,7 +13,7 @@ export const Item = styled.li`
   font-family: "Quicksand", sans-serif;
 `;
 
-export const Button = styled.button`
+export const ContactButton = styled.button`
   padding: 8px 15px;
   border: none;
   border-radius: 4px;

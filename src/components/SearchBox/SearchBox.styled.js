@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Box = styled.div`
+export const SearchBoxWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -8,13 +8,13 @@ export const Box = styled.div`
   margin: 20px 0;
 `;
 
-export const Label = styled.label`
+export const SearchBoxLabel = styled.label`
   color: #1825d3ff;
   font-family: "Quicksand", sans-serif;
   font-size: 17px;
 `;
 
-export const Input = styled.input`
+export const SearchBoxInput = styled.input`
   padding: 10px;
   border: solid 1px #2534ffff;
   border-radius: 4px;

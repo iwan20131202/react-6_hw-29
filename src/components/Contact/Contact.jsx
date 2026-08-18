@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 
 import { deleteContact } from "../../redux/contactsSlice";
 
-import { Item, Button } from "./Contact.styled";
+import { ContactItem, ContactButton } from "./Contact.styled";
 
 export const Contact = ({ contact }) => {
   const dispatch = useDispatch();
@@ -12,14 +12,14 @@ export const Contact = ({ contact }) => {
   };
 
   return (
-    <Item>
+    <ContactItem>
       <span>
         {contact.name}: {contact.number}
       </span>
 
-      <Button type="button" onClick={handleDelete}>
+      <ContactButton type="button" onClick={handleDelete}>
         Delete
-      </Button>
-    </Item>
+      </ContactButton>
+    </ContactItem>
   );
 };

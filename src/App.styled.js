@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const AppContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px;
 `;
 
-export const Title = styled.h1`
+export const AppTitle = styled.h1`
   margin: 0 0 25px;
   color: #4451ffff;
   font-family: "Josefin Sans", sans-serif;

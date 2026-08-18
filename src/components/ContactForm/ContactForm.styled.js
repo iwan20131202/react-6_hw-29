@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Form = styled.form`
+export const ContactFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -11,14 +11,14 @@ export const Form = styled.form`
   font-family: "Quicksand", sans-serif;
 `;
 
-export const Label = styled.label`
+export const ContactFormLabel = styled.label`
   display: flex;
   flex-direction: column;
   gap: 5px;
   color: black;
 `;
 
-export const Input = styled.input`
+export const ContactFormInput = styled.input`
   padding: 8px;
   border: none;
   border-radius: 4px;
@@ -31,7 +31,7 @@ export const Input = styled.input`
   }
 `;
 
-export const Button = styled.button`
+export const ContactFormButton = styled.button`
   padding: 10px;
   border: none;
   border-radius: 4px;

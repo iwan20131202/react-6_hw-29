@@ -2,19 +2,19 @@ import { ContactForm } from "./components/ContactForm/ContactForm";
 import { ContactList } from "./components/ContactList/ContactList";
 import { SearchBox } from "./components/SearchBox/SearchBox";
 
-import { Container, Title } from "./App.styled";
+import { AppContainer, AppTitle } from "./App.styled";
 
 function App() {
   return (
-    <Container>
-      <Title>Phonebook</Title>
+    <AppContainer>
+      <AppTitle>Phonebook</AppTitle>
 
       <ContactForm />
 
       <SearchBox />
 
       <ContactList />
-    </Container>
+    </AppContainer>
   );
 }
 
