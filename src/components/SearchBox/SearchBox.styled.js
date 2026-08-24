@@ -3,26 +3,27 @@ import styled from "styled-components";
 export const SearchBoxWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 340px;
-  margin: 20px 0;
+  gap: 8px;
+  margin-top: 15px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: #182033;
 `;
 
 export const SearchBoxLabel = styled.label`
-  color: #1825d3ff;
-  font-family: "Quicksand", sans-serif;
-  font-size: 17px;
+  color: #aab2c3;
+  font-size: 12px;
+  font-weight: 700;
 `;
 
 export const SearchBoxInput = styled.input`
-  padding: 10px;
-  border: solid 1px #2534ffff;
-  border-radius: 4px;
-  font-family: "Quicksand", sans-serif;
-  font-size: 16px;
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #303a50;
+  border-radius: 10px;
   outline: none;
+  color: #fff;
+  background: #101622;
 
-  &:focus {
-    box-shadow: 0 4px 8px rgba(1, 97, 176, 0.2);
-  }
+  &:focus { border-color: #6366f1; }
 `;

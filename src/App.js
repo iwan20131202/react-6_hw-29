@@ -1,20 +1,40 @@
-import { ContactForm } from "./components/ContactForm/ContactForm";
-import { ContactList } from "./components/ContactList/ContactList";
-import { SearchBox } from "./components/SearchBox/SearchBox";
+import { lazy, Suspense } from "react";
+import {
+  AppContainer,
+  AppHeader,
+  AppSubtitle,
+  AppTitle,
+  ContentGrid,
+  HeroIcon,
+} from "./App.styled";
 
-import { AppContainer, AppTitle } from "./App.styled";
+const ContactForm = lazy(() => import("./components/ContactForm/ContactForm"));
+const SearchBox = lazy(() => import("./components/SearchBox/SearchBox"));
+const ContactList = lazy(() => import("./components/ContactList/ContactList"));
 
 function App() {
   return (
-    <AppContainer>
-      <AppTitle>Phonebook</AppTitle>
+    <main>
+      <AppContainer>
+        <AppHeader>
+          <HeroIcon>☎</HeroIcon>
+          <div>
+            <AppTitle>Phonebook</AppTitle>
+            <AppSubtitle>Твої контакти — завжди під рукою</AppSubtitle>
+          </div>
+        </AppHeader>
 
-      <ContactForm />
-
-      <SearchBox />
-
-      <ContactList />
-    </AppContainer>
+        <Suspense fallback={<div>Завантаження...</div>}>
+          <ContentGrid>
+            <section>
+              <ContactForm />
+              <SearchBox />
+            </section>
+            <ContactList />
+          </ContentGrid>
+        </Suspense>
+      </AppContainer>
+    </main>
   );
 }
 

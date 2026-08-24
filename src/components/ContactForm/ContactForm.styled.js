@@ -3,46 +3,52 @@ import styled from "styled-components";
 export const ContactFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  width: 300px;
+  gap: 12px;
   padding: 20px;
-  background-color: #007bffff;
-  border-radius: 8px;
-  font-family: "Quicksand", sans-serif;
+  border-radius: 16px;
+  background: #182033;
+`;
+
+export const FormTitle = styled.h2`
+  margin: 0 0 5px;
+  color: #fff;
+  font-size: 19px;
 `;
 
 export const ContactFormLabel = styled.label`
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  color: black;
+  gap: 6px;
+  color: #aab2c3;
+  font-size: 12px;
 `;
 
 export const ContactFormInput = styled.input`
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  font-family: "Quicksand", sans-serif;
-  font-size: 16px;
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #303a50;
+  border-radius: 10px;
   outline: none;
+  color: #fff;
+  background: #101622;
 
-  &:focus {
-    box-shadow: 0 4px 8px rgba(0, 140, 255, 1);
-  }
+  &:focus { border-color: #6366f1; }
+`;
+
+export const ContactFormError = styled.p`
+  margin: -2px 0 0;
+  color: #fb7185;
+  font-size: 11px;
 `;
 
 export const ContactFormButton = styled.button`
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  background-color: #17bfd5ff;
+  padding: 11px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: #6366f1;
   color: white;
-  font-family: "Quicksand", sans-serif;
-  font-size: 16px;
+  font-weight: 700;
   cursor: pointer;
-  transition: 0.3s;
 
-  &:hover {
-    background-color: #3d9f9fff;
-  }
+  &:hover { background: #5558dc; }
 `;
