@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 import { Contact } from "../Сontact/Сontact";
 
-import { Title, List } from "./Contact-list.styled";
+import { ListTitle, ContactsList } from "./Сontact-list.styled";
 
 export const ContactList = () => {
   const contacts = useSelector((state) => state.contacts.contacts);
@@ -14,13 +14,13 @@ export const ContactList = () => {
 
   return (
     <>
-      <Title>Contacts</Title>
+      <ListTitle>Contacts</ListTitle>
 
-      <List>
+      <ContactsList>
         {filteredContacts.map((contact) => (
           <Contact key={contact.id} contact={contact} />
         ))}
-      </List>
+      </ContactsList>
     </>
   );
 };
