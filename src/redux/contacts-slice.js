@@ -1,7 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import { loadContacts } from "./local-storage";
+
 const initialState = {
-  contacts: [],
+  contacts: loadContacts(),
   filter: "",
 };
 

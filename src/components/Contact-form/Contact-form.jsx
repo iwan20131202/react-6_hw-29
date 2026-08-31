@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { addContact } from "../../redux/contacts-slice";
 
-import { FormWrapper, FieldLabel, FieldInput, SubmitButton } from "./Сontact-form.styled";
+import { FormWrapper, FieldLabel, FieldInput, SubmitButton } from "./Contact-form.styled";
 
 export const ContactForm = () => {
   const [name, setName] = useState("");

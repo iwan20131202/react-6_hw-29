@@ -10,7 +10,7 @@ export const FormWrapper = styled.form`
   width: 100%;
   padding: 32px;
 
-  background: #f5f1ff;
+  background: var(--color-panel-bg);
   border-radius: 18px;
 
   font-family: "Quicksand", sans-serif;
@@ -19,6 +19,12 @@ export const FormWrapper = styled.form`
     grid-template-columns: 1fr;
     padding: 22px;
   }
+
+  @media (max-width: 420px) {
+    gap: 16px;
+    padding: 16px;
+    border-radius: 12px;
+  }
 `;
 
 export const FieldLabel = styled.label`
@@ -26,9 +32,13 @@ export const FieldLabel = styled.label`
   flex-direction: column;
   gap: 10px;
 
-  color: #5427b8;
+  color: var(--color-accent-strong);
   font-size: 24px;
   font-weight: 500;
+
+  @media (max-width: 420px) {
+    font-size: 18px;
+  }
 `;
 
 export const FieldInput = styled.input`
@@ -38,24 +48,31 @@ export const FieldInput = styled.input`
   height: 58px;
   padding: 12px 16px;
 
-  background: #ffffff;
-  border: 2px solid #d2c5f2;
+  background: var(--color-input-bg);
+  border: 2px solid var(--color-border);
   border-radius: 8px;
 
-  color: #292044;
+  color: var(--color-text);
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
 
   outline: none;
-  transition: 0.2s;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+
+  @media (max-width: 420px) {
+    height: 48px;
+    font-size: 16px;
+  }
 
   &:focus {
-    border-color: #6937d5;
+    border-color: var(--color-accent);
     box-shadow: 0 0 0 3px rgba(105, 55, 213, 0.12);
   }
 
   &::placeholder {
-    color: #a39bb8;
+    color: var(--color-text-muted);
   }
 `;
 
@@ -68,7 +85,7 @@ export const SubmitButton = styled.button`
   border: none;
   border-radius: 8px;
 
-  background: #5427b8;
+  background: var(--color-accent-strong);
   color: #ffffff;
 
   font-family: "Quicksand", sans-serif;
@@ -77,8 +94,13 @@ export const SubmitButton = styled.button`
 
   transition: 0.2s;
 
+  @media (max-width: 420px) {
+    height: 48px;
+    font-size: 18px;
+  }
+
   &:hover {
-    background: #43209b;
+    background: var(--color-accent-dark);
   }
 
   &:active {

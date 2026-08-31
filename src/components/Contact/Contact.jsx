@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 
 import { deleteContact } from "../../redux/contacts-slice";
 
-import { ContactCard, DeleteButton } from "./Сontact.styled";
+import { ContactCard, DeleteButton } from "./Contact.styled";
 
 export const Contact = ({ contact }) => {
   const dispatch = useDispatch();

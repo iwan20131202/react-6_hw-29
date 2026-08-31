@@ -1,3 +1,59 @@
+:root {
+  --color-page-bg: #f8f7fc;
+  --color-card-bg: #ffffff;
+  --color-card-shadow: rgba(76, 45, 160, 0.12);
+
+  --color-title: #32158f;
+  --color-text: #292044;
+  --color-text-muted: #a39bb8;
+
+  --color-accent: #6937d5;
+  --color-accent-dark: #43209b;
+  --color-accent-strong: #5427b8;
+  --color-accent-soft: #6542d6;
+
+  --color-border: #d2c5f2;
+  --color-panel-bg: #f5f1ff;
+  --color-input-bg: #ffffff;
+
+  --color-contact-bg: #ffffff;
+  --color-contact-border: #e2dcf1;
+  --color-contact-shadow: rgba(76, 45, 160, 0.08);
+  --color-contact-shadow-hover: rgba(76, 45, 160, 0.13);
+
+  --color-scrollbar-track: #f1edfa;
+  --color-scrollbar-thumb: #8a6bdd;
+  --color-scrollbar-thumb-hover: #6542d6;
+}
+
+[data-theme="dark"] {
+  --color-page-bg: #17131f;
+  --color-card-bg: #221b30;
+  --color-card-shadow: rgba(0, 0, 0, 0.45);
+
+  --color-title: #c7b3ff;
+  --color-text: #eae6f5;
+  --color-text-muted: #8b83a3;
+
+  --color-accent: #9a7cf0;
+  --color-accent-dark: #b498ff;
+  --color-accent-strong: #b498ff;
+  --color-accent-soft: #a58ef0;
+
+  --color-border: #453a5e;
+  --color-panel-bg: #2a2238;
+  --color-input-bg: #2a2238;
+
+  --color-contact-bg: #2a2238;
+  --color-contact-border: #3c3352;
+  --color-contact-shadow: rgba(0, 0, 0, 0.3);
+  --color-contact-shadow-hover: rgba(0, 0, 0, 0.4);
+
+  --color-scrollbar-track: #2a2238;
+  --color-scrollbar-thumb: #5c4d84;
+  --color-scrollbar-thumb-hover: #9a7cf0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -10,11 +66,13 @@ body,
 
 body {
   margin: 0;
-  background: #f8f7fc;
+  background: var(--color-page-bg);
 
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+  transition: background-color 0.2s;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

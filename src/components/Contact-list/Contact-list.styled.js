@@ -5,10 +5,14 @@ export const ListTitle = styled.h2`
 
   margin: 0;
 
-  color: #5427b8;
+  color: var(--color-accent-strong);
   font-family: "Josefin Sans", sans-serif;
   font-size: 42px;
   font-weight: 700;
+
+  @media (max-width: 420px) {
+    font-size: 28px;
+  }
 `;
 
 export const ContactsList = styled.ul`
@@ -21,6 +25,11 @@ export const ContactsList = styled.ul`
   width: 100%;
   max-height: 320px;
 
+  @media (max-width: 420px) {
+    max-height: 260px;
+    gap: 8px;
+  }
+
   padding: 0;
   margin: 0;
 
@@ -30,23 +39,23 @@ export const ContactsList = styled.ul`
   list-style: none;
 
   scrollbar-width: thin;
-  scrollbar-color: #8a6bdd #f1edfa;
+  scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
 
   &::-webkit-scrollbar {
     width: 8px;
   }
 
   &::-webkit-scrollbar-track {
-    background: #f1edfa;
+    background: var(--color-scrollbar-track);
     border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: #8a6bdd;
+    background: var(--color-scrollbar-thumb);
     border-radius: 10px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: #6542d6;
+    background: var(--color-scrollbar-thumb-hover);
   }
 `;

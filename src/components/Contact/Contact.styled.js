@@ -13,24 +13,28 @@ export const ContactCard = styled.li`
 
   padding: 18px 20px;
 
-  background: #ffffff;
+  background: var(--color-contact-bg);
 
-  border: 1px solid #e2dcf1;
-  border-left: 6px solid #6937d5;
+  border: 1px solid var(--color-contact-border);
+  border-left: 6px solid var(--color-accent);
   border-radius: 12px;
 
-  color: #292044;
+  color: var(--color-text);
 
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
 
-  box-shadow: 0 4px 12px rgba(76, 45, 160, 0.08);
+  box-shadow: 0 4px 12px var(--color-contact-shadow);
 
-  transition: 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
 
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 7px 18px rgba(76, 45, 160, 0.13);
+    box-shadow: 0 7px 18px var(--color-contact-shadow-hover);
   }
 
   span {
@@ -48,6 +52,11 @@ export const ContactCard = styled.li`
       white-space: normal;
     }
   }
+
+  @media (max-width: 420px) {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
 `;
 
 export const DeleteButton = styled.button`
@@ -55,11 +64,11 @@ export const DeleteButton = styled.button`
 
   padding: 10px 20px;
 
-  border: 2px solid #6937d5;
+  border: 2px solid var(--color-accent);
   border-radius: 8px;
 
-  background: #ffffff;
-  color: #5427b8;
+  background: var(--color-input-bg);
+  color: var(--color-accent-strong);
 
   font-family: "Quicksand", sans-serif;
   font-size: 16px;
@@ -69,7 +78,11 @@ export const DeleteButton = styled.button`
   transition: 0.2s;
 
   &:hover {
-    background: #6937d5;
+    background: var(--color-accent);
     color: #ffffff;
+  }
+
+  @media (max-width: 550px) {
+    align-self: stretch;
   }
 `;
