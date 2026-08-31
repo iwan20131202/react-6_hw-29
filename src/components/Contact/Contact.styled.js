@@ -26,11 +26,7 @@ export const ContactCard = styled.li`
 
   box-shadow: 0 4px 12px var(--color-contact-shadow);
 
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s,
-    background-color 0.2s,
-    border-color 0.2s;
+  transition: 0.2s;
 
   &:hover {
     transform: translateY(-2px);

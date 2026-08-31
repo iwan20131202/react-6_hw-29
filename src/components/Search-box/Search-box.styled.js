@@ -45,9 +45,6 @@ export const SearchInput = styled.input`
   font-size: 18px;
 
   outline: none;
-  transition:
-    background-color 0.2s,
-    border-color 0.2s;
 
   @media (max-width: 420px) {
     height: 48px;
