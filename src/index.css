@@ -52,3 +52,14 @@ button,
 input {
   font: inherit;
 }
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(180, 152, 255, 0.35);
+  outline-offset: 2px;
+}

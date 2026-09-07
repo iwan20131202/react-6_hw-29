@@ -1,8 +1,6 @@
 import { useSelector } from "react-redux";
-
 import { Contact } from "../Contact/Contact";
-
-import { ListTitle, ContactsList } from "./Contact-list.styled";
+import { ListHeader, ListTitle, ContactCount, EmptyState, ContactsList } from "./Contact-list.styled";
 
 export const ContactList = () => {
   const contacts = useSelector((state) => state.contacts.contacts);
@@ -14,13 +12,22 @@ export const ContactList = () => {
 
   return (
     <>
-      <ListTitle>Contacts</ListTitle>
+      <ListHeader>
+        <ListTitle>Contacts</ListTitle>
+        <ContactCount>{contacts.length}</ContactCount>
+      </ListHeader>
 
-      <ContactsList>
-        {filteredContacts.map((contact) => (
-          <Contact key={contact.id} contact={contact} />
-        ))}
-      </ContactsList>
+      {filteredContacts.length > 0 ? (
+        <ContactsList>
+          {filteredContacts.map((contact) => (
+            <Contact key={contact.id} contact={contact} />
+          ))}
+        </ContactsList>
+      ) : (
+        <EmptyState>
+          {contacts.length === 0 ? "Your phonebook is empty. Add your first contact!" : "No contacts found for this search."}
+        </EmptyState>
+      )}
     </>
   );
 };
